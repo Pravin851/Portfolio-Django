@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
+</head>
+<body>
+    
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <nav>
+            <a href="{% url 'resume_info' %}">View Resumes</a>
+            <a href="{% url 'Internship_Experience' %}">Internship Experience</a>
+            <a href="{% url 'project_info' %}">Projects</a>
+            <a href="{% url 'login' %}">Login</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="summary">
+            <h2>Summary</h2>
+            <p>I am a skilled developer with a strong foundation in Python, Django, and web technologies. I have a passion for creating efficient and scalable solutions.</p>
+            <p>My expertise includes building web applications, RESTful APIs, and working with databases. I am constantly learning and staying updated with the latest industry trends.</p>
+        </section>
+
+        <section class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Language: Python</li>
+                <li>Framework: Django</li>
+                <li>Web Technologies: HTML, CSS, JavaScript</li>
+                <li>API Development: RESTful APIs</li>
+                <li>Database Management: MySQL, PostgreSQL, MongoDB</li>
+                <li>Version Control: Git</li>
+            </ul>
+        </section>
+
+        <section class="education">
+            <h2>Education</h2>
+            <div class="edu-card">
+                <h4>Bachelor of Computer Science and Engineering</h4>
+                <p>Anna University : S A Engineering College</p>
+                <p>Graduation Year: 2026</p>
+                <p>CGPA: 8.03</p>
+            </div>
+            <div class="edu-card">
+                <h4>Higher Secondary School</h4>
+                <p>Vivekananda Vidyalaya Matric Higher Secondary School</p>
+                <p>Graduation Year: 2022</p>
+                <p>Percentage: 82.5%</p>
+            </div>
+            <div class="edu-card">
+                <h4>Secondary School</h4>
+                <p>Vivekananda Vidyalaya Matric Higher Secondary School</p>
+                <p>Graduation Year: 2020</p>
+                <p>Percentage: 87%</p>
+            </div>
+        </section>
+
+        <section class="contact">
+            <h2>Contact Information</h2>
+            <p>Email: pravinkumar.a67@gmail.com</p>
+            <p>Phone: +91 6369586424</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/pravin-kumar-928701381/" target="_blank">LinkedIn Profile</a></p>
+            <p>GitHub: <a href="https://github.com/Pravin851" target="_blank">GitHub Profile</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My Portfolio. All rights reserved.</p>
+        <p>Email: pravinkumar.a67@gmail.com</p>
+        <p>Contact: +91 6369586424</p>
+    </footer>
+    
+</body>
+</html>

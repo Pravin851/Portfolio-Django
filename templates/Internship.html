@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Experience</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/internship.css' %}">
+</head>
+<body>
+    <h1>Internship Experience</h1>
+{% for experience in experiences %}
+    <div class="Internship-Experience">
+            <table>
+                <tr>
+                    <td>Company_name:{{ experience.company_name }}</td>
+                </tr>
+                <tr>
+                    <td>Position:{{ experience.position }}</td>
+                </tr>
+                <tr>
+                    <td>Duration:{{ experience.start_date }} to {{ experience.end_date }}</td>
+                </tr>
+                <tr>
+                    <td>Description:{{ experience.description }}</td>
+                </tr>
+                <tr>
+                    <td>link:
+                        {% if experience.certificate %}
+                            <a href="{{ experience.certificate.url }}" target="_blank">View Certificate</a>
+                        {% else %}
+                            No Certificate
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {% if experience.image %}
+                            <img src="{{ experience.image.url }}" alt="Image" style="max-width: 100px; max-height: 100px;">
+                        {% endif %}
+                    </td>
+                </tr>
+            </table>
+    </div>
+    {% endfor %}
+    
+</body>
+</html>

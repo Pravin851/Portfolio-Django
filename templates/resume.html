@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/resume.css' %}">
+</head>
+<body>
+    <h1>Resume</h1>
+    <form action="{% url 'resumes' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" required>
+        <br><br>
+        <label for="file">Upload Resume:</label>
+        <input type="file" name="file" id="file" required>
+        <br><br>
+        <label>Image:</label>
+        <input type="file" name="image" id="id_image">
+        <br><br>
+        <button type="submit">Upload Resume</button>
+    </form>
+</body>
+</html>

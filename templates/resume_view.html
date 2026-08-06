@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Resume</title>
+</head>
+<body>
+    <center>
+        {% if resumes %}
+            {% for resume in resumes %}
+                <h2>{{ resume.name }}</h2>
+                <img src="{{ resume.image.url }}" alt="Resume" style="max-width: 100%; height: auto;">
+            {% endfor %}
+        {% else %}
+            <p>No resumes available.</p>
+        {% endif %}
+    </center>
+</body>
+</html>

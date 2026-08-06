@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/experience.css' %}">
+</head>
+<body>
+    <h1>Experience</h1>
+    
+    <form action="{% url 'experiences' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+            <table>
+                <tr>
+                    <td><label for="username">User</label></td>
+                    <td><input type="text" name="username" id="username"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="id_company">Company</label></td>
+                    <td><input type="text" name="company" id="id_company"></td>
+                </tr>
+                <tr>
+                    <td><label for="id_position">Position</label></td>
+                    <td><input type="text" name="position" id="id_position"></td>
+                </tr>
+                <tr>
+                    <td><label for="id_start_date">Start Date</label></td>
+                    <td><input type="date" name="start_date" id="id_start_date"></td>
+                </tr>
+                <tr>
+                    <td><label for="id_end_date">End Date</label></td>
+                    <td><input type="date" name="end_date" id="id_end_date"></td>
+                </tr>
+                <tr>
+                    <td><label for="id_description">Description</label></td>
+                    <td><textarea name="description" id="id_description"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="id_certificate">Certificate</label></td>
+                    <td><input type="file" name="certificate" id="id_certificate"></td>
+                </tr>
+                <tr>
+                    <td><label for="id_image">Image</label></td>
+                    <td><input type="file" name="image" id="id_image"></td>
+                </tr>
+            </table>
+            <button type="submit">Submit</button>
+    </form>
+
+    
+</body>
+</html>
